@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project11729_TowerOfHanoi",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project27433_Factorial2", "Project27433_Factorial2\Project27433_Factorial2.vcxproj", "{EA40EE0A-2876-4A5C-A501-2A28CF8A6488}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project10870_Fibonacci", "Project10870_Fibonacci\Project10870_Fibonacci.vcxproj", "{EB924F05-38C1-4601-AF2F-59C389668FCE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project25501_GeniusOfRecursion", "Project25501_GeniusOfRecursion\Project25501_GeniusOfRecursion.vcxproj", "{CC5C321C-26DF-4812-886E-692D19863E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +35,22 @@ Global
 		{EA40EE0A-2876-4A5C-A501-2A28CF8A6488}.Release|x64.Build.0 = Release|x64
 		{EA40EE0A-2876-4A5C-A501-2A28CF8A6488}.Release|x86.ActiveCfg = Release|Win32
 		{EA40EE0A-2876-4A5C-A501-2A28CF8A6488}.Release|x86.Build.0 = Release|Win32
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Debug|x64.ActiveCfg = Debug|x64
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Debug|x64.Build.0 = Debug|x64
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Debug|x86.ActiveCfg = Debug|Win32
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Debug|x86.Build.0 = Debug|Win32
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Release|x64.ActiveCfg = Release|x64
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Release|x64.Build.0 = Release|x64
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Release|x86.ActiveCfg = Release|Win32
+		{EB924F05-38C1-4601-AF2F-59C389668FCE}.Release|x86.Build.0 = Release|Win32
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Debug|x64.ActiveCfg = Debug|x64
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Debug|x64.Build.0 = Debug|x64
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Debug|x86.ActiveCfg = Debug|Win32
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Debug|x86.Build.0 = Debug|Win32
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Release|x64.ActiveCfg = Release|x64
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Release|x64.Build.0 = Release|x64
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Release|x86.ActiveCfg = Release|Win32
+		{CC5C321C-26DF-4812-886E-692D19863E7E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
