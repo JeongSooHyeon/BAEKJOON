@@ -47,7 +47,7 @@ int main() {
 	int n;	// 배열 크기 5 <= n < 500000
 	cin >> n >> k;
 	vector<int> v;
-	vector<int> temp(v.size());
+	vector<int> temp(n);
 
 	int e;
 
