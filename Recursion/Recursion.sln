@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project24060_MergeSorting",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project14779_CantorSet", "Project14779_CantorSet\Project14779_CantorSet.vcxproj", "{2EB6F128-4663-47B0-87EF-376DCB83D571}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "project4779_ver2", "project4779_ver2\project4779_ver2.vcxproj", "{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{2EB6F128-4663-47B0-87EF-376DCB83D571}.Release|x64.Build.0 = Release|x64
 		{2EB6F128-4663-47B0-87EF-376DCB83D571}.Release|x86.ActiveCfg = Release|Win32
 		{2EB6F128-4663-47B0-87EF-376DCB83D571}.Release|x86.Build.0 = Release|Win32
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Debug|x64.ActiveCfg = Debug|x64
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Debug|x64.Build.0 = Debug|x64
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Debug|x86.Build.0 = Debug|Win32
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Release|x64.ActiveCfg = Release|x64
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Release|x64.Build.0 = Release|x64
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Release|x86.ActiveCfg = Release|Win32
+		{5271B7E5-28D0-437C-A11B-FC3EF50D10E9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
