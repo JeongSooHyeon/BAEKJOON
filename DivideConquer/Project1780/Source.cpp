@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 
-int cnt_1 = 0, cnt0 = 0;
+int cnt_1 = 0, cnt0 = 0, cnt1 = 0;
 
 bool isOne(vector<vector<int>>& v, int row, int col, int size) {
 	int first = v[row][col];	// 첫번째 색
-	for (int i = row; i < row+size; i++) {
-		for (int j = col; j < col+ size; j++) {
+	for (int i = row; i < row + size; i++) {
+		for (int j = col; j < col + size; j++) {
 			if (v[i][j] != first)
 				return false;
 		}
@@ -16,21 +16,23 @@ bool isOne(vector<vector<int>>& v, int row, int col, int size) {
 }
 void countPaper(vector<vector<int>>& v, int row, int col, int size) {
 	// 기저 사례 : 모두 한 색상이면
-	if (isOne(v, row, col, size))	
+	if (isOne(v, row, col, size))
 	{
-		if (v[row][col])	// 파란 색
+		if (v[row][col] == 0)
 			cnt0++;
-		else
+		else if (v[row][col] == -1)
 			cnt_1++;
+		else
+			cnt1++;
 		return;
 	}
 
-	int half = size / 2;
-	countPaper(v, row, col, half);
-	countPaper(v, row, col+half, half);
-	countPaper(v, row+half, col, half);
-	countPaper(v, row+half, col+half, half);
-
+	int oneThird = size / 3;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			countPaper(v, row + (i * oneThird), col + (j * oneThird), oneThird);
+		}
+	}
 }
 
 int main() {
@@ -47,6 +49,6 @@ int main() {
 	}
 
 	countPaper(v, 0, 0, n);
-	cout << cnt_1 << '\n' << cnt0;
+	cout << cnt_1 << endl << cnt0 << endl << cnt1;
 
 }
