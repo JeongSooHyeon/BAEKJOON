@@ -5,41 +5,36 @@ using namespace std;
 
 int n;
 int a[5][5];
-int a2[5][5];
 int result[5][5] = { {0,} };
 
-void mult(int arr1[5][5], int arr2[5][5]) {	// 두 행렬 곱하기
+// 두 행렬 곱하기
+void mult(int arr1[5][5], int arr2[5][5]) {	
+	int temp[5][5] = { {0,} };
 
 	for (int i = 0; i < n; i++) {	// 3 arow
 		for (int j = 0; j < n; j++) {	// 3 bcol
 			for (int w = 0; w < n; w++) {	// 2 bcol arow
-				result[i][j] += (arr1[i][w] * arr2[w][j]) % C;
+				temp[i][j] += arr1[i][w] * arr2[w][j];
 			}
 		}
 	}
 
-	for (int i = 0; i < n; i++) {	
-		for (int j = 0; j < n; j++) {	
-			arr1[i][j] = result[i][j];
-			}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			arr1[i][j] = temp[i][j] % C;
 		}
 	}
 }
 
-void Power(int exp) {
-	if (exp == 1) {
-		mult()
-	}
-
-	int half = exp / 2;
+void Power(long long exp) {
 	if (exp % 2 == 1) {	// 홀수
-		mult(a, a);
+		mult(result, a);
+		if (exp == 1)	// 지수가 1이면 종료
+			return;
 	}
-	else {// 짝수
-		mult(a2, a);
-	}
+	mult(a, a);
 
-	Power(half);
+	Power(exp/2);
 }
 
 int main() {
@@ -49,15 +44,14 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			cin >> a[i][j];
-			a2[i][j] = a[i][j];
 		}
+		result[i][i] = 1;	// 항등행렬
 	}
-	
 
+	Power(b);
 
-	power();
 	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < k; j++) {
+		for (int j = 0; j < n; j++) {
 			cout << result[i][j] << ' ';
 		}
 		cout << endl;

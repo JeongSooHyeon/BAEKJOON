@@ -13,14 +13,14 @@ typedef vector<vector<ll>> matrix;
 
 #define C 1000000007
 
-long long int n;
+ll n;
 
 matrix operator*(matrix a, matrix b) {
 	matrix ret(2, vector<ll>(2));
 
-	for (ll i = 0; i < a.size(); i++) {
-		for (ll j = 0; j < a.size(); j++) {
-			for (ll k = 0; k < a.size(); k++)
+	for (int i = 0; i < a.size(); i++) {
+		for (int j = 0; j < a.size(); j++) {
+			for (int k = 0; k < a.size(); k++)
 			{
 				ret[i][j] += (a[i][k] * b[k][j]);
 			}
