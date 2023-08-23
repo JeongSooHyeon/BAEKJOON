@@ -19,14 +19,14 @@ long long histogram(vector<long long> &height, int start, int end) {
 	long long minH = min(height[lo], height[hi]);
 	long long tempArea = minH * cnt;
 	ret = max(ret, tempArea);	// 왼쪽 or 오른쪽 너비와 중간 포함 너비 중 큰 거
-	while (true) {
+	while (start < lo || hi < end) {
 		// 둘 다 끝까지 갔으면 break
-		if (start >= lo && end <= hi) {
-			break;
-		}
+		//if (start >= lo && end <= hi) {
+		//	break;
+		//}
 
 		// lo가 끝까지 갔거나 or hi가 더 큰 경우
-		if (start >= lo || height[lo-1] < height[hi+1]) {	// 오른쪽 높이가 더 커
+		if (hi < end && (start >= lo || height[lo - 1] < height[hi + 1])) {	// 오른쪽 높이가 더 커
 			hi++; cnt++;
 			minH = min(minH, height[hi]);
 		}
@@ -45,6 +45,7 @@ long long histogram(vector<long long> &height, int start, int end) {
 
 
 int main() {
+	vector<long long> answer;
 	while (true) {
 		int n;	// 직사각형 수 1 <= 100,000
 		cin >> n;
@@ -56,7 +57,11 @@ int main() {
 		}
 
 		// 함수 호출
-		cout << histogram(height, 0, 0) << endl;
+		answer.push_back(histogram(height, 0, n-1));
 	}
+
+	for (vector<long long>::size_type i = 0; i < answer.size(); i++)
+		cout << answer[i] << endl;
+
 	return 0;
 }
